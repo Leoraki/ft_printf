@@ -6,7 +6,7 @@
 #    By: lmangall <lmangall@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 17:19:46 by lmangall          #+#    #+#              #
-#    Updated: 2023/01/13 23:19:34 by lmangall         ###   ########.fr        #
+#    Updated: 2023/01/14 22:17:54 by lmangall         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC 			:= cc
 CFLAGS 		:= -Wall -Wextra -Werror
 NAME 		:= libftprintf.a
 NAMELFT 	:= libft.a
-sources 	:= ft_printf.c pick_n_print.c
+sources 	:= ft_printf.c pick_n_print.c dec_to_hex.c
 objects 	:= $(sources:.c=.o)
 LIBDIR 		:= libft
 
@@ -39,7 +39,8 @@ fclean:	clean
 re:	fclean all
 .PHONY: all clean fclean re
 
-
-# # $@ is the name of the target being generated, 
-# # $< the first prerequisite (usually a source file). 
-# # get rid of the .o
+# -o executes what is after ($@ is the name of the exec)
+# -c compiles source files without linking
+# $@ is the name of the target being generated, 
+# $< the first prerequisite (usually a source file). 
+# get rid of the .o

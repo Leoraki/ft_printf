@@ -3,9 +3,10 @@
 
 int main(void)
 {
-	const char *cc = "test";
-	ft_printf("test \n %d", 9);
-	//ft_printf(cc);
+	int ret = 0;
+	// const char *cc = "test";
+	ret = ft_printf("output %% \n %s\n", "string");
+	printf("\n\n return value from main: %i \n", ret);
 
     return (0);
 }
