@@ -4,8 +4,9 @@
 int main(void)
 {
 	int ret = 0;
+	unsigned int ui = -245;
 	// const char *cc = "test";
-	ret = ft_printf("output %% \n %s\n", "string");
+	ret = ft_printf("\nunsigned int : %u", "ui");
 	printf("\n\n return value from main: %i \n", ret);
 
     return (0);

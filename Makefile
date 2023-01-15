@@ -6,7 +6,7 @@
 #    By: lmangall <lmangall@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 17:19:46 by lmangall          #+#    #+#              #
-#    Updated: 2023/01/14 22:17:54 by lmangall         ###   ########.fr        #
+#    Updated: 2023/01/15 13:13:41 by lmangall         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,8 @@ $(NAME):	$(objects)
 		make -C $(LIBDIR)
 		cp -v $(LIBDIR)/$(NAMELFT) $(NAME)
 		ar cr $@ $^
+
+$(objects):%.o:%.c
 		$(CC) $(CFLAGS) -c -o $@ $<
 	
 clean:

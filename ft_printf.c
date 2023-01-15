@@ -6,7 +6,7 @@
 /*   By: lmangall <lmangall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 17:20:09 by lmangall          #+#    #+#             */
-/*   Updated: 2023/01/14 20:25:42 by lmangall         ###   ########.fr       */
+/*   Updated: 2023/01/15 13:17:24 by lmangall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,20 +45,20 @@ int	ft_printf(const char *format, ...)
 	i = 0;
 	ret = 0;
 	va_start(conv, format);//initialize conv with function last fixed argument
-	printf("\n ret before : %i \n", ret);
+	// printf("\n ret before : %i \n", ret);
 	while (format[i])
 	{
 		if (format[i] == '%' && ft_strchr("cspdiuxX%", format[i + 1]))
 		{
 			i++;//format[i] is now on the format specifier
 			ret += pick_n_print(conv, i, format);
-			printf("\n ret in loop : %i \n", ret);
+			// printf("\n ret in loop : %i \n", ret);
 		}
 		else
 			ret += ft_putchar_fd(format[i], 1);
 		i++;
 	}
-	printf("\n ret after : %i \n", ret);
+	// printf("\n ret after : %i \n", ret);
 	va_end(conv);
 	return (ret);
 	// write() is a function of type int 
