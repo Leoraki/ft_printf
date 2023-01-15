@@ -6,7 +6,7 @@
 #    By: lmangall <lmangall@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 17:19:46 by lmangall          #+#    #+#              #
-#    Updated: 2023/01/15 13:13:41 by lmangall         ###   ########.fr        #
+#    Updated: 2023/01/15 20:10:06 by lmangall         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC 			:= cc
 CFLAGS 		:= -Wall -Wextra -Werror
 NAME 		:= libftprintf.a
 NAMELFT 	:= libft.a
-sources 	:= ft_printf.c pick_n_print.c dec_to_hex.c
+sources 	:= ft_printf.c pick_n_print.c dec_to_hex.c putptr.c
 objects 	:= $(sources:.c=.o)
 LIBDIR 		:= libft
 
